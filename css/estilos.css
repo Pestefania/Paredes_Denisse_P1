@@ -1,3 +1,16 @@
+:root {
+    --fondo-pagina: #f1f4f6;
+    --texto-principal: #333333;
+    --azul-oscuro: #183b56;
+    --blanco: #ffffff;
+    --turquesa-claro: #b9e5e5;
+    --turquesa-oscuro: #08717b;
+    --borde: #c9dce8;
+    --fondo-tabla: #edf4f8;
+    --borde-formulario: #b8d3e5;
+    --fondo-consejo: #e1eeee;
+}
+
 /* Estilos generales */
 body {
     margin: 0;
@@ -15,6 +28,23 @@ main {
 
 img {
     max-width: 100%;
+}
+
+/* Botón para saltar al contenido principal */
+.saltar-contenido {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background-color: #183b56;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.saltar-contenido:focus {
+    top: 10px;
 }
 
 /* Encabezado */
@@ -185,7 +215,7 @@ input, select, textarea {
     background-color: white;
 }
 
-/* Marco azul al seleccionar los campos */
+/* Marco al seleccionar los campos */
 input:focus, select:focus, textarea:focus {
     outline: 2px solid #08717b;
     border-color: #08717b;
@@ -221,17 +251,40 @@ footer {
     background-color: #183b56;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 12px;
+    margin-top: 25px;
+}
+
+footer h3 {
+    margin: 5px;
+}
+
+footer span {
+    color: #b9e5e5;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 8px;
+}
+
+footer .horario {
+    font-size: 12px;
+    color: #b9e5e5;
 }
 
 footer a {
-    color: white;
+    color: #b9e5e5;
+    text-decoration: none;
 }
 
 /* Foco visible para navegar con teclado */
-a:focus-visible, button:focus-visible,
-input:focus-visible, select:focus-visible,
-textarea:focus-visible, summary:focus-visible {
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
     outline: 3px solid #08717b;
     outline-offset: 3px;
 }
@@ -248,7 +301,8 @@ textarea:focus-visible, summary:focus-visible {
         gap: 8px;
     }
 
-    .presentacion, .lista-servicios {
+    .presentacion,
+    .lista-servicios {
         grid-template-columns: 1fr;
     }
 
