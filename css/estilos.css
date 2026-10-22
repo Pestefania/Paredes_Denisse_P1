@@ -1,0 +1,262 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f4f6;
+    color: #333333;
+    line-height: 1.6;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Encabezado */
+header {
+    background-color: #183b56;
+    padding: 20px;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Menú */
+nav ul {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #b9e5e5;
+    text-decoration: underline;
+}
+
+/* Presentación */
+.presentacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #c9dce8;
+    border-radius: 12px;
+}
+
+.presentacion h1 {
+    color: #183b56;
+    font-size: 34px;
+}
+
+.presentacion img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Títulos */
+h2 {
+    color: #183b56;
+}
+
+section {
+    margin: 40px 0;
+}
+
+/* Botones */
+.boton {
+    display: inline-block;
+    background-color: #08717b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.boton:hover {
+    background-color: #183b56;
+}
+
+/* Servicios */
+.lista-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+article {
+    background-color: white;
+    padding: 22px;
+    border: 1px solid #c9dce8;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px #0000000d;
+}
+
+article h3 {
+    color: #08717b;
+}
+
+/* Tabla de precios */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 20px;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th, td {
+    padding: 13px;
+    border: 1px solid #c9dce8;
+    text-align: left;
+}
+
+th {
+    background-color: #183b56;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #edf4f8;
+}
+
+/* Formulario */
+fieldset {
+    background-color: white;
+    border: 1px solid #b8d3e5;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+legend {
+    color: #183b56;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+input, select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    border: 1px solid #b8d3e5;
+    border-radius: 6px;
+    font: inherit;
+    background-color: white;
+}
+
+/* Marco azul al seleccionar los campos */
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #08717b;
+    border-color: #08717b;
+    box-shadow: 0 0 5px #08717b30;
+}
+
+/* Preguntas frecuentes */
+details {
+    background-color: white;
+    padding: 16px;
+    margin: 12px 0;
+    border: 1px solid #b8d3e5;
+    border-radius: 8px;
+}
+
+summary {
+    color: #183b56;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Consejo para el vehículo */
+.consejo {
+    background-color: #e1eeee;
+    border-left: 5px solid #08717b;
+    padding: 20px;
+    margin: 35px 0;
+    border-radius: 6px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #183b56;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer a {
+    color: white;
+}
+
+/* Foco visible para navegar con teclado */
+a:focus-visible, button:focus-visible,
+input:focus-visible, select:focus-visible,
+textarea:focus-visible, summary:focus-visible {
+    outline: 3px solid #08717b;
+    outline-offset: 3px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 640px) {
+    .cabecera {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .presentacion, .lista-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    .presentacion h1 {
+        font-size: 27px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
